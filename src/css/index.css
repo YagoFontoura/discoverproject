@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+:root {
+  --backgroundDarkMode: linear-gradient(
+    to left,
+    #000000,
+    #1d1117,
+    #2e1b2b,
+    #3b2744,
+    #403662,
+    #433d73,
+    #444584,
+    #424d96,
+    #534a9c,
+    #66469f,
+    #793fa0,
+    #8d369f
+  );
+  --backgroundLightMode: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  --backgroundButtons: rgba(255, 255, 255, 0.1);
+  --fontFamily: "Inter", sans-serif;
+  --textColorWhite: #ffffff;
+  --textColorBlack: #000000;
+}
+
+body {
+  font-family: var(--fontFamily);
+}
+.Dark {
+  background: var(--backgroundDarkMode);
+  color: var(--textColorWhite);
+  .buttonMode{
+    border-color: var(--textColorWhite);
+  }
+}
+.Light {
+  background: var(--backgroundLightMode);
+  color: var(--textColorBlack);
+}
+.container {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.Perfil-image {
+  width: 112px;
+}
+.Buttons {
+  font-weight: 500;
+  width: 312px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--backgroundButtons);
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 55px;
+  text-decoration: none;
+}
+.buttonMode {
+  width: 64px;
+  height: 24px;
+  border-radius: 999px;
+  background-color: var(--backgroundButtons);
+  border: 1px solid;
+}
+.ImageMode {
+  position: relative;
+  top: -13px;
+  left: 16px;
+}
+
+.Redes_Sociais {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.animationLight {
+  animation: AnimationLight 0.5s;
+  animation-fill-mode: forwards
+}
+.animationDark {
+  animation: AnimationDark 0.5s;
+  animation-fill-mode: forwards
+}
+
+@keyframes AnimationLight {
+  from {
+    top: -13px;
+    left: 16px;
+    transform: rotate(90deg)
+  }
+  to {
+    top: -13px;
+    left: -20px;
+    transform: rotate(0)
+  }
+}
+
+@keyframes AnimationDark {
+  from {
+    top: -13px;
+    left: -20px;
+    transform: rotate(-90deg)
+  }
+  to {
+    left: 16px;
+    top: -13px;
+    transform: rotate(0deg)
+  }
+}
+
+@media (min-width: 1000px) {
+  .Buttons {
+    width: 540px;
+  }
+}
