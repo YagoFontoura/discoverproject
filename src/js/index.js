@@ -9,7 +9,7 @@ function changeMode() {
     if(body.classList == "Dark") {
         body.classList.remove("Dark");
         body.classList.add("Light");
-        ImageMode.src = "/src/images/LightMode/handle.png";
+        ImageMode.src = "./src/images/LightMode/handle.png";
         ImageMode.classList.add("animationLight")
         ImageMode.classList.remove("animationDark")
 
@@ -20,7 +20,7 @@ function changeMode() {
     } else if(body.classList == "Light") {
         body.classList.remove('Light');
         body.classList.add("Dark");
-        ImageMode.src = "/src/images/LightMode/handleNight.png";
+        ImageMode.src = "./src/images/LightMode/handleNight.png";
         ImageMode.classList.add("animationDark")
         ImageMode.classList.remove("animationLight")
         githubIcon.src = "./src/images/Redes_Sociais/GitHub.png"
